@@ -1,0 +1,6 @@
+{
+  "name": "مَداك | MadakOS",
+  "description": "منصة مَداك (MadakOS) - المنصة الإنتاجية المتكاملة التي تجمع مساحات العمل، إدارة المهام والمشاريع، تقنية بومودورو، وشبكة المعرفة وبطاقات الاستذكار.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
