@@ -1,8 +1,8 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
 import LandingPage from "./components/LandingPage";
-// 1. استيراد المكون الرئيسي للتطبيق الفعلي (أو واجهة اللوحة الرئيسية لديك)
-import MainLayout from "./components/MainLayout"; // أو المكون الرئيسي للتطبيق لديك مثل Dashboard أو Workspace
+// استيراد المكون الرئيسي الفعلي للتطبيق
+import NotionWorkspace from "./components/notion/NotionWorkspace";
 
 export default function App() {
   const [path, setPath] = useState(window.location.pathname);
@@ -19,9 +19,9 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
-  // عند الدخول إلى المسار /app يتم عرض التطبيق الفعلي مباشرة دون أي تأخير
+  // عند الضغط على "فتح التطبيق" (المسار /app) يفتح التطبيق مباشرة دون أي صفحة انتظار
   if (path === "/app") {
-    return <MainLayout navigate={navigate} />;
+    return <NotionWorkspace navigate={navigate} />;
   }
 
   return <LandingPage navigate={navigate} />;
