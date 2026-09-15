@@ -7,7 +7,10 @@
       "android": {
         "buildType": "apk"
       },
-      "node": "20.18.0"
+      "node": "20.18.0",
+      "env": {
+        "NPM_CONFIG_LEGACY_PEER_DEPS": "true"
+      }
     }
   }
 }
