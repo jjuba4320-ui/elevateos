@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
-// تحديد امتداد الملف .jsx بدقة لمنع خطأ Vite
-import LandingPage from "./components/LandingPage.jsx";
+// استيراد بدون امتداد ليتولى Vite اكتشاف النوع تلقائياً
+import LandingPage from "./components/LandingPage";
 import NotionWorkspace from "./components/notion/NotionWorkspace";
 
 export default function App() {
