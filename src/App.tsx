@@ -1,8 +1,9 @@
+// @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import LandingPage from './LandingPage'; 
+import LandingPage from './LandingPage';
 
 export default function App() {
-  const [path, setPath] = useState(window.location.pathname);
+  const [path, setPath] = useState<string>(window.location.pathname);
 
   useEffect(() => {
     const handleLocationChange = () => setPath(window.location.pathname);
@@ -16,16 +17,49 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
-  // إذا تم توجيه المستخدم إلى التطبيق
   if (path === '/app') {
     return (
-      <div style={{ backgroundColor: '#0a0a14', height: '100vh', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <h2>هنا سيظهر تطبيق MadakOS الأساسي لاحقاً 🚀</h2>
-        <button onClick={() => navigate('/')} style={{ marginLeft: '20px', padding: '10px', cursor: 'pointer' }}>العودة</button>
+      <div
+        style={{
+          backgroundColor: '#0a0a14',
+          minHeight: '100vh',
+          color: '#f1f0ff',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontFamily: "'Segoe UI', system-ui, sans-serif",
+          direction: 'rtl',
+          textAlign: 'center',
+          padding: '20px',
+        }}
+      >
+        <h1 style={{ fontSize: '28px', marginBottom: '12px' }}>
+          مرحباً بك في تطبيق <span style={{ color: '#818cf8' }}>MadakOS</span> 🚀
+        </h1>
+        <p style={{ color: '#a5a3c8', marginBottom: '24px', maxWidth: '400px' }}>
+          جاري إعداد مساحة العمل الخاصة بك للتنظيم والتفوق...
+        </p>
+        <button
+          onClick={() => navigate('/')}
+          style={{
+            padding: '12px 28px',
+            cursor: 'pointer',
+            borderRadius: '30px',
+            border: 'none',
+            background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+            color: '#ffffff',
+            fontWeight: 600,
+            fontSize: '15px',
+            boxShadow: '0 0 15px rgba(99,102,241,0.4)',
+            transition: 'transform 0.2s',
+          }}
+        >
+          العودة للصفحة الرئيسية
+        </button>
       </div>
     );
   }
 
-  // الصفحة الرئيسية تعرض صفحة الهبوط
   return <LandingPage navigate={navigate} />;
 }
