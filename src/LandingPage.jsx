@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Monitor, Smartphone, Apple, CheckCircle, Star, Clock, ListTodo,
   KanbanSquare, StickyNote, ChevronRight, Zap, Shield, Target,

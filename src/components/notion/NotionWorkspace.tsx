@@ -23,7 +23,7 @@ import { NotionWhiteboardView } from './views/NotionWhiteboardView';
 
 import { useNotionStore } from '../../stores/useNotionStore';
 
-export function NotionWorkspace() {
+export function NotionWorkspace({ navigate }: { navigate?: (path: string) => void }) {
   const { themeMode, language, activeView } = useNotionStore();
   const isDark = themeMode === 'dark';
 
@@ -73,5 +73,8 @@ export function NotionWorkspace() {
     </div>
   );
 }
+
+export default NotionWorkspace;
+
 
 

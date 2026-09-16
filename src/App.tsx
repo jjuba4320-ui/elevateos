@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
-// استيراد بدون امتداد ليتولى Vite اكتشاف النوع تلقائياً
 import LandingPage from "./components/LandingPage";
 import NotionWorkspace from "./components/notion/NotionWorkspace";
 
